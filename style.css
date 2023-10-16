@@ -7,8 +7,12 @@
 body{
     width: 100%;
     height: 100%;
+    max-height: 1000px;
     background: linear-gradient(130deg, #628E75 0.66%, #1A4855 83.32%);
-box-shadow: 26px 24px 90px 0px rgba(31, 26, 51, 0.13);
+    box-shadow: 26px 24px 90px 0px rgba(31, 26, 51, 0.13);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .menu{
@@ -16,7 +20,7 @@ box-shadow: 26px 24px 90px 0px rgba(31, 26, 51, 0.13);
     height: 15rem;
     margin: 0 auto;
     display: flex;
-    gap: 50%;
+    gap: 45%;
     align-items: center;
     justify-content: center;
 }
@@ -46,8 +50,193 @@ section{
     gap: 3rem;
 }
 
+.corpo1 > h2 {
+    color: #F9F9F9;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.corpo1 > h1 { 
+    color: #F9F9F9;
+font-family: Poppins;
+font-size: 68px;
+font-style: normal;
+font-weight: 900;
+line-height: 109%; /* 74.12px */
+}
+
+.corpo1{
+    color: #F9F9F9;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+}
+
+button {
+    background: transparent;
+    border: 4px solid #658e76;
+    color: #f8f1f1;
+    padding: 16px 40px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 300;
+    /*responsável por inclinar o botão*/
+    transform: skew(-24deg);
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: #658e76;
+  }
+  
+  button > p {
+    /*responsável por desinclinar o texto*/
+    transform: skew(24deg);
+    font-weight: 600;
+  }
+  
+
 
 .imagemdd > img{
-    width: 42vw;
-    height: 97vh;
+    width: 41vw;
+    margin: 0 auto;
+    position: relative;
+    bottom: 70px;
+   
+}
+
+@media screen and (max-width: 962px) and (min-width: 732px) {
+    
+    .munu > img {
+        position: relative;
+        left: 6rem;
+    }
+    
+    .corpo1{
+        margin-left:22px
+    }
+
+    .corpo1 > h1 {
+        font-size: 40px;
+    }
+    
+    .imagemdd > img{
+        width:50vw;
+        width: 46vw;
+        bottom: -25px;
+    }
+
+    .butoes{
+        display: flex;
+        gap: 15px;
+        width:100%
+    }
+}
+
+@media screen and (max-width: 734px) and (min-width: 584px) {
+    .menu{
+        gap:14%;
+    }
+
+    section{
+        display:grid;
+    }
+
+    .imagemdd{
+        position: relative;
+        bottom: 28rem;
+        left: 5rem;
+    }
+
+    .imagemdd > img {
+        width: 68vw;
+    }
+
+    .corpo1{
+        position: relative;
+        top: 19rem;
+        left: 1rem;
+    }
+    button{
+        padding: 16px 15px;
+    }
+}
+
+
+@media screen and (max-width: 584px) and (min-width: 480px) {
+    .menu{
+        gap:14%;
+    }
+
+    section{
+        display:grid;
+    }
+
+    .imagemdd{
+        position: relative;
+        bottom: 28rem;
+        left: 5rem;
+    }
+
+    .imagemdd > img {
+        width: 68vw;
+    }
+
+    .corpo1{
+        position: relative;
+        top: 19rem;
+        left: 1rem;
+    }
+    button{
+        padding: 16px 15px;
+    }
+}
+
+@media screen and (max-width: 478px) and (min-width: 360px) {
+    .menu{
+        gap:14%;
+    }
+
+    section{
+        display:grid;
+    }
+
+    .imagemdd{
+        position: relative;
+        bottom: 25rem;
+        left: 1rem;
+      
+    }
+
+    .imagemdd > img {
+        width: 86vw;
+    }
+
+    .corpo1{
+        position: relative;
+        top: 19rem;
+        left: 1rem;
+    }
+
+    .corpo1 > h1 {  
+        font-size: 41px;
+        position: relative;
+    }
+
+   .butoes{
+        display: flex;
+        gap: 15px;
+        width:100%
+    }
+
+    button{
+        padding: 16px 15px;
+    }
 }
